@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Player 1</th>
+        <th scope="col">Player 2</th>
+      </tr>
+    </thead>
+    <% for(var i=0; i < games.length; i++) { %>
+      <tr>
+        <td>
+          <%= games[i].player_1 %>
+        </td>
+        <td>
+          <%= games[i].player_2 %>
+        </td>
+      </tr>
+      <% } %>
+  </table>
+</body>
+
+</html>
