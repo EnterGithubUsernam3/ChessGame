@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+  <a href="/players/register">Add new Player</a>
+  <ul>
+    <% for(var i=0; i < players.length; i++) { %>
+      <li>
+        <%= `Id: ${players[i].id}\tFirst Name: ${players[i].firstName}\tLast Name: ${players[i].lastName}\t Email:
+          ${players[i].emal} ` %>&nbsp;
+          <a href="/players/delete?id=<%= players[i].id %>">Delete</a>
+      </li>
+      <% } %>
+  </ul>
+</body>
+
+</html>
