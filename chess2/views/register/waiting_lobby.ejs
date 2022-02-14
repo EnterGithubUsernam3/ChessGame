@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= message %></h1>
+    <h3><a href="/">Main Page</a></h3>
+    <% if (players.length < 4){ %>
+        <h2>Need <%= 4 - players.length %> player(s) to start the Tournament</h2>
+    <% } %>    
+    <h2>Current Players In Tournament: <%= players.length %></h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+      <% for(var i = 0; i < players.length; i++) { %>
+      <tr>
+        <td><%= players[i].id %></td>
+        <td><%= players[i].firstName %></td>
+        <td><%= players[i].lastName %></td>
+      </tr>
+      <% }; %>
+    </table>
+    <br>
+    <% if (players.length >= 4){ %>
+        <a href="/tournament">Start Tournament</a>
+    <% } %> 
+  </body>
+</html>
